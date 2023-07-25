@@ -9,10 +9,10 @@ class Solution:
             
             if arr[mid-1]<arr[mid]>arr[mid+1]:
                 return mid
-            elif mid+1==len(arr) or arr[mid-1]>arr[mid]>arr[mid+1]:
-                right=mid-1
-            else:
+            elif mid-1>-1 and arr[mid-1]<arr[mid]<arr[mid+1]:
                 left=mid+1
+            else:
+                right=mid-1
                 
         return left
         
